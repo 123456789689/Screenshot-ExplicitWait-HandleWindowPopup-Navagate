@@ -45,5 +45,8 @@ public class Readpropertiesfile {
 		System.setProperty("webdriver.chrome.driver", "D:\\driver\\chromedriver.exe");
 		d = new ChromeDriver();
 		d.get(url);
+		
+		d.findElement(By.xpath(prop.getProperty("Firstname_xpath"))).sendKeys(prop.getProperty("Firstname"));
+		d.findElement(By.xpath(prop.getProperty("Surename_xpath"))).sendKeys(prop.getProperty("Surename"));
 	}
 }
